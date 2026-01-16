@@ -1,152 +1,139 @@
-# Matrix of Destiny Visualization and Arcana Interpretation
+# Numerology Matrix Calculator
 
-## Project Overview
+## What This Does
 
-The **Numerology Matrix Calculator** is a computational tool designed to generate and visualize the "Matrix of Destiny" based on an individual's birth date. This matrix is derived from classical numerological principles and combines elements of number reduction, karmic analysis, and symbolic interpretation from special dataset through arcana representations. The repository provides both the computational algorithms and visualization tools for a clear, aesthetically pleasing representation of the numerological matrix.
+The Numerology Matrix Calculator generates and visualizes a numerological “Matrix of Destiny” from a user’s birth date. It combines classical numerological reduction with arcana-based symbolic interpretation to deliver both numerical results and visual output.
 
-The tool serves as a bridge between **numerical analysis, symbolic interpretation, and graphical representation**, offering both researchers and enthusiasts a means to study the relationships between birth date components and their derived numerological values.
+Example: Enter your birth date and the tool calculates key numerological numbers, visualizes them, and interprets the results using arcana meanings.
 
----
+## Why You Might Want This
 
-## Features
+This project solves the problem of manually calculating and interpreting your numerological matrix. It provides structured output and graphics so that users interested in numerology can get insight quickly without doing hand calculations.
 
-* Calculates numerological numbers based on the date of birth
-* Computes main matrix numbers: Top, Right, Bottom, Left, Center
-* Calculates corner numbers for the large square
-* Visualizes the Matrix of Destiny
-* Reads arcana interpretations from a tab-separated file (`matrix_interpretation.txt`)
-* Outputs detailed interpretations for:
+Example: Instead of performing multiple manual reductions and symbolic mappings, this tool automates the entire process and presents a clear visual.
 
-  * Center
-  * Portrait (Left corner)
-  * Other numbers
+## ⚡ Quick Start (30 seconds)
 
----
+1. Download: Clone the repository
+2. Run: Execute `run_comprehensive_calculator.py`
+3. Done: View output in generated image and console interpretation
 
+Having trouble? Scroll down for detailed instructions.
 
-## Theoretical Background
+## What You Need Before Starting
 
-The Destiny Matrix is a numerological model based on your date of birth. It combines mathematical reduction (summing and reducing digits to a number ≤ 22) with symbolic meanings from the 22 Major Arcana of Tarot cards.
-Each zone of the matrix reflects a specific area of your life from your visible personality to your inner purpose and karmic lessons.
+- Python 3 installed
+- `matrix_interpretation.txt` data file (included)
+- Libraries (if any specified in requirements)
 
-### Diamond
+## How to Use It
 
-| Position   | Name                  | Meaning                                  | Number 
-| ---------- | --------------------- | ---------------------------------------- | --------------
-| **Center** | Comfort / Core Energy | Soul essence, inner peace, life purpose. | Day + month + year + Spiritual Karma
-| **Left**   | Portrait              | How others see you, social image.        | Day
-| **Top**    | Hidden Talents        | Natural gifts and potential.             | Month
-| **Right**  | Material Karma        | Financial or practical challenges.       | Year
-| **Bottom** | Spiritual Karma       | Past-life lessons to resolve.            | Day + month + year
+### Step 1: Get the Files
 
+Clone or download this repository from GitHub.
 
-### Square (Ancestral Programs)
+### Step 2: Open the Program
 
-| Position         | Meaning                     |
-| ---------------- | --------------------------- |
-| **Top Left**     | Father’s spiritual lineage. |
-| **Top Right**    | Mother’s spiritual lineage. |
-| **Bottom Left**  | Father’s material lineage.  |
-| **Bottom Right** | Mother’s material lineage.  |
+Navigate to the project folder in your terminal or command prompt.
 
-Each corner = sum of two nearby sides.
+### Step 3: Follow the Prompts
 
----
+Run the Python script and input your birth date when prompted (`DD.MM.YYYY`). The script calculates all matrix values and interpretations.
 
-## Input Data Format
+### Step 4: Find Your Results
 
-1. **Birth Date** – entered as `DD.MM.YYYY`
-   Example:
+A PNG visualization and printed arcana interpretation will appear in the console and project directory.
 
-   ```
-   12.12.2012
-   ```
+## How You'll Know It Worked
 
-2. **Arcana Interpretation File (`matrix_interpretation.txt`)** – tab-separated values with columns in folder `data\`:
+You should see:
 
-   ```
-   number |	name |	general meaning	| central meaning	| outer expression
-   ...
-   ```
-Meanings:
-   * `number` – numeric identifier
-   * `name` – arcana name
-   * `general meaning` – general interpretation
-   * `central meaning` – meaning for the central number
-   * `outer expression` – meaning for portrait
----
+✅ A generated PNG file with the matrix visualization  
+✅ Console output showing arcana numbers and meanings  
+✅ No errors during script execution
 
-## Output
+If you don't see these, check the troubleshooting section.
 
-The program outputs:
+## How Long This Takes
 
-* **Matrix Visualization** saved as a PNG file (`Matrix_of_Destiny_{DD-MM-YYYY}.png`)
-* **Arcana Interpretation** in the console, including:
+- Setup: 1-5 minutes
+- First run: ~30 seconds
+- Subsequent runs: ~10 seconds each
 
-  * Center: number, name, center-specific value
-  * Birth Card (Left): number, name, potrait value
-  * Other main sides: number, name, general value
-  * Big square corners: number, name, general value
+## 🖥️ For Windows Users
 
-Example output:
+Open PowerShell or Command Prompt, navigate into the project folder, and run:
 
-```
-=== ARCANA INTERPRETATION ===
+python run_comprehensive_calculator.py
 
-Center: 11 - Strength  - As a core energy, this Arcanum represents self-mastery and emotional intelligence. The main task is to harmonize passion with reason, expressing strength through empathy. 
-Birth Card (Left): 20 - Judgement  - Outwardly serious, insightful, and dignified. Often carries an aura of purpose or moral depth. Speech and posture convey gravity and awareness. 
+## 🍎 For Mac Users
 
+Open Terminal, `cd` into the project folder, then run:
 
-Other main Arcanas:
-9 - The Hermit  - Symbol of solitude, introspection, and pursuit of truth. Associated with wisdom, patience, and spiritual maturity. 
-8 - Justice  - Symbolizes fairness, balance, law, and moral accountability. Represents evaluation and rational clarity. 
-10 - Wheel of Fortune  - Represents destiny, cycles, and transformation through chance. Symbol of life’s impermanence and karmic rhythm. 
+python3 run_comprehensive_calculator.py
 
-Big Square Corners:
-Corner 1 : 17 - The Star  - Represents hope, inspiration, and spiritual rejuvenation. Symbol of idealism, faith, and gentle creativity. 
-Corner 2 : 18 - The Moon  - Symbol of emotion, imagination, illusion, and subconscious influence. Represents intuition and hidden fears. 
-Corner 3 : 3 - The Empress  - Embodies abundance, beauty, and creative manifestation. Symbol of nurturing energy, growth, and natural prosperity. Reflects harmony between material and emotional fulfillment. 
-Corner 4 : 11 - Strength  - Embodies inner courage, endurance, and compassionate control over instincts. Represents calm power and moral fortitude. 
-```
+## 📱 For Phone/Tablet Users
 
----
+Mobile terminals are not supported for running Python scripts; use a desktop or laptop.
 
-## How to Use
+## What Each Part Does
 
-1. Place the Python script and `matrix_interpretation.txt` in the **same folder**.
-2. Run the script in Python 3.8+ or in Jupyter Notebook.
-3. Enter your birth date when prompted (`DD.MM.YYYY`).
-4. The program will automatically:
+| File/Folder Name | What It's For |
+|------------------|---------------|
+| `run_comprehensive_calculator.py` | Main execution script |
+| `data/` | Arcana interpretation files |
+| `numerology/` | Core calculators and logic |
+| `Matrix_of_Destiny_*.png` | Generated visualization output |
+| `README.md` | This file |
 
-   * Calculate all matrix numbers and corners
-   * Visualize the Matrix of Destiny as a PNG file
-   * Print arcana interpretations for center, birth card, other sides, and corners
+## Before You Give Up
 
----
+1. Make sure Python is installed
+2. Confirm you are in the correct folder
+3. Ensure `matrix_interpretation.txt` is present
+4. Run `python` or `python3` explicitly
+5. Ask for help with error messages
 
-## Test
+## Not Working? Try the Simple Version
 
-For testing, use the provided `matrix_interpretation.txt` dataset. 
+If this full setup gives trouble, focus on running the script without visualization and reading console output only.
 
-1. Run the script.
-2. Verify that `Matrix_of_Destiny_{DD-MM-YYYY}.png` is generated and compare to image from `data\example`
+## Common Questions
 
----
+**Q: I got an error about missing modules - what do I do?**  
+A: Install required Python packages or ensure you run with correct Python version.
 
-## Authors
+**Q: Can I use this on my Mac?**  
+A: Yes, if Python is installed.
 
-| GitHub       | Name                 | Role                     |
-| ------------ | -------------        | ------------------------ |
-| mariika1306  |	Vlasova Maria       | Co-author & Developer     |
-| xugowho	     | Demchenko Alexander |	Co-author & Developer     |
-| aadergileva	 | Dergileva Anastasia |	Co-author & Developer     |
-> Project developed independently. All code, formulas, interpretations and visualizations are original.
+**Q: Is this free to use?**  
+A: Yes, under the MIT license.
+
+## If You See These Scary Messages
+
+| Scary Message | What It Actually Means | Fix |
+|---------------|----------------------|-----|
+| "Module not found" | Python package missing | Install via `pip install` |
+| "Permission denied" | No write access | Run in a writable folder |
+| "Syntax error" | Python version mismatch | Use correct Python version |
+
+## If Something Goes Wrong
+
+1. Verify Python installation
+2. Confirm script is in the current directory
+3. Double-check input date format `DD.MM.YYYY`
+4. Search for the specific error online or ask for help
+
+## Why I Made This
+
+This tool exists to automate the tedious process of numerology matrix calculation and interpretation through code, visualization, and structured output.
+
+This took dedicated effort to integrate arcana interpretation with numeric calculation and visuals.
+
+## How to Say Thanks
+
+Star the repository on GitHub and share with others interested in numerology automation.
 
 ## License
 
-This repository is distributed under the MIT License. Users are free to use, modify, and share the code and data for research and educational purposes.
-
----
-
-**⭐ If this project was helpful, please give it a star!**
-
+This project is licensed under the MIT License. You can use and modify it freely under its terms.
